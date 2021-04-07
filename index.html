@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<title>JS learning</title>
+</head>
+<body>
+	<h3>localStorage , save</h3>
+	<div id="result1"></div>
+	
+	<hr/>
+	<h3>button click couner app in localStorage</h3>
+	<p><button onclick="clickCounter()" type="button">Click me!</button><button onclick="reset()" type="button">reset</button></p>
+	<div id="result2"></div>
+	<hr/>
+	<h3>Parse server string data to JS objects</h3>
+	<p>Server data = '{"name":"John", "age":30, "city":"New York"}'</p>
+	<button onclick="parsInt ()" type="button">Parse</button>
+	<p id="result3"></p>
+	<hr/>
+	<h3> cancels the event if it is cancelable</h3>
+	<a id="EVENT" href="https://google.com">Google</a>
+	<hr/>
+	<h3>Click anywhere in the whole of document</h3>
+	<button onclick="Remove ()" type="button">Remove</button>
+	<p id="result4"></p>
+	<hr/>
+	<h3> return </h3>
+	<p id="result5"></p>
+	<hr/>
+	<h3> get input's value </h3>
+	Name: <input type="text" id="myText1" value="hi Pouria" />
+	<button onclick="Whats_value()">Triy it</button>
+	
+	<script src="./script.js"></script>
+</body>
+</html>
