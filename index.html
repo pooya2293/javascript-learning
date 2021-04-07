@@ -4,6 +4,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<style>
+		#result7 > button {
+			border:0;
+			cursor: pointer;
+			background-color: #9c88ff;
+			color: #fff;
+			box-shadow:0 1px 3px rgba(0, 0, 0, 0.12) , 0 1px 2px rgba(0, 0, 0, 0.24);
+			font-size: 16px;
+			margin: 10px 1px 30px;
+			padding: 10px;
+		}
+	</style>
 	<title>JS learning</title>
 </head>
 <body>
@@ -33,7 +45,25 @@
 	<h3> get input's value </h3>
 	Name: <input type="text" id="myText1" value="hi Pouria" />
 	<button onclick="Whats_value()">Triy it</button>
+	<hr/>
+	<h3> trim only remove withe space first and end of the sentence </h3>
+	<button onclick="Trim ()" type="button">Trim</button>
+	<p id="result6"></p>
+	<hr/>
+	<h3> appendChild </h3>
+	<ul id="myList1">
+		<li>Coffee</li>
+		<li>Tea</li>
+	</ul>
+	<button onclick="My_appendChild()">Try it</button>
+	<hr/>
+	<h3> createElement </h3>
+	<button onclick="My_createElement()">Try it</button>
+	<p id="result7">come on Append here:</p>
+	<hr/>
+	<h3> txt </h3>
 	
 	<script src="./script.js"></script>
+	
 </body>
 </html>

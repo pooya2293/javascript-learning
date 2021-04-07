@@ -75,7 +75,29 @@ function Whats_value() {
 };
 
 
-	
+/* Trim space */
+var str_trim = "       Hello   world    !        " ;
+//alert(str_trim);
+function Trim () {
+	alert(str_trim.trim());
+};
+
+/* appendChild */
+
+function My_appendChild (){
+	let node = document.createElement('li');//Create a <li> node
+	let textnode = document.createTextNode('Ali');//Create a text node 
+	node.appendChild(textnode);//Append the text to <li>
+	document.getElementById('myList1').appendChild(node);//Append <li> to <ul> with id="myList1"
+};
+
+/* MycreateElement */
+
+function My_createElement () {
+	let btn = document.createElement("BUTTON"); // Create a <button> element
+	btn.innerHTML = "CLICK ME!"; // Insert text
+	document.getElementById('result7').appendChild(btn); // Append <button> to id="result7"
+};
 	
 	
 	
