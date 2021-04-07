@@ -98,6 +98,66 @@ function My_createElement () {
 	btn.innerHTML = "CLICK ME!"; // Insert text
 	document.getElementById('result7').appendChild(btn); // Append <button> to id="result7"
 };
+
+/* classList() */
+
+function My_classList () {
+	document.getElementById("myDIV").classList.add("mystyle");
+};
+function remove_My_classList () {
+	document.getElementById("myDIV").classList.remove("mystyle");
+};
+
+
+/* map */
+
+function My_map () {
+	let num = [4,9,16,25];
+	let x = document.getElementById('result8');
+	x.innerHTML = num.map(Math.sqrt);
+};
+
+/*! use map !*/
+
+var nums_map = [65,44,12,4];
+var newArray = nums_map.map(My_map2);
+document.getElementById('result8-1').innerHTML = newArray;
+function My_map2 (x) {
+	return x * 10;
+};
+
+/* reduce or increas in array from left to right */
+
+var nums_reduce = [175,25,50,50];
+
+document.getElementById('result9').innerHTML =  nums_reduce.reduce(My_reduce);
+
+function My_reduce (a,b) {
+	return a + b;
+};
+
+/* Click the button to get the sum of the rounded numbers in the array and plus 10 */
+
+
+var reduce_array = [15.5, 2.3, 1.1, 4.7];// named array
+
+function My_click1 (){
+	document.getElementById('result10').innerHTML = 
+	answer1;//get id result 10 = round_sum + 10;
+};//if click button run funcy
+
+
+function My_reduce2 (a,b) {
+	return Math.round(a+b);
+};//named funcy
+
+const answer1 = `round(Sum_Array) + 10 = ${reduce_array.reduce(My_reduce2,10)} `;
+
+
+
+
+
+
 	
 	
 	
