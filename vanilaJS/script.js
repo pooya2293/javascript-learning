@@ -40,7 +40,11 @@ function parsInt() {
 
 /* Create JSON string from a JavaScript object. */
 
-var obj = { name: "John", age: 30, city: "New York" };
+var obj = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
 var myJSON = JSON.stringify(obj);
 var myJSON_Pars = JSON.parse(myJSON);
 document.getElementById("demo").innerHTML = myJSON;
@@ -137,7 +141,7 @@ var nums_reduce = [175, 25, 50, 50];
 document.getElementById('result9').innerHTML = nums_reduce.reduce(My_reduce);
 
 function My_reduce(a, b) {
-    return a + b;
+    return a - b;
 };
 
 /* Click the button to get the sum of the rounded numbers in the array and plus 10 */
@@ -158,34 +162,61 @@ const answer1 = `round(Sum_Array) + 10 = ${reduce_array.reduce(My_reduce2,10)} `
 
 /* round decimal num to What u whant */
 
-function My_toFixed (){
-	let num = 5.567896;
-	let result = num.toFixed(2);
-	let answer = `num = ${result}`;
-		document.getElementById('result11').innerText =
-		answer;
+function My_toFixed() {
+    let num = 5.567896;
+    let result = num.toFixed(2);
+    let answer = `num = ${result}`;
+    document.getElementById('result11').innerText =
+        answer;
 };
-
 
 /* filter top of 18 */
 
-function My_Filter(){
-	let ages = [32, 33, 16, 40,17,19];
-	let check_top_18 = (age) => {return age >= 18;};
-	let Solve = ages.filter(check_top_18);
-	//or --> 
-	//let Solve = ages.filter((age) => age >= 18);
-	let answer = `ages = [${Solve}]`;
-	document.getElementById('result12').innerText =
-	answer;
-	
+function My_Filter() {
+    let ages = [32, 33, 16, 40, 17, 19];
+    let check_top_18 = (age) => {
+        return age >= 18;
+    };
+    let Solve = ages.filter(check_top_18);
+    //or -->
+    //let Solve = ages.filter((age) => age >= 18);
+    let answer = `ages = [${Solve}]`;
+    document.getElementById('result12').innerText =
+        answer;
+
 };
 
+/* forEach */
 
+function My_forEach() {
 
+    let fruits = ["apple", "orange", "cherry"];
 
+    let answer = fruits.forEach(My_sul);
 
+};
 
+function My_sul(item, index) {
 
+    document.getElementById('result13').innerHTML += index + " :" + item + "<br/>";
+};
 
+function generateID() {
+    return Math.floor(Math.random() * 100000000);
+};
 
+/* Math.abs or mosbat saz  */
+
+function My_Math_abs() {
+    let a = Math.abs(7.25);
+    let b = Math.abs(-7.25);
+    let c = Math.abs(null);
+    let d = Math.abs("Hello");
+    let e = Math.abs(2 + 3);
+    let f = Math.abs(-2 + 3);
+
+    let x = a + '<br/>' + b + '<br/>' + c + '<br/>'
+         + d + '<br/>' + e + '<br/>' + f;
+
+    document.getElementById('result14').innerHTML = x;
+}
