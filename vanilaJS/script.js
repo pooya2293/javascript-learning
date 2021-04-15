@@ -223,7 +223,7 @@ function My_Math_abs() {
 
 /* change src of img1 id */
 
-var click = 0;
+var click = 1;
 	function click_count() {
 		click = click + 1;
 		document.querySelector('#result15').innerText =
@@ -231,9 +231,9 @@ var click = 0;
 	}
 
 function change() {
-	click_count()
-	if (click%2 == 0)//is click num even{
-    document.querySelector('#img1').src = 'images/summer.jpg';}else {
+	click_count();
+	if (click%2 == 0)//is click num even
+    { document.querySelector('#img1').src = 'images/summer.jpg'; }else {
 		document.querySelector('#img1').src = 'images/Frog-Series.jpg';
 	}
 }
@@ -241,6 +241,8 @@ function change() {
 document.querySelector('#img1').addEventListener('click',change);
 
 /*********************/
+
+
 
 
 
