@@ -201,10 +201,6 @@ function My_sul(item, index) {
     document.getElementById('result13').innerHTML += index + " :" + item + "<br/>";
 };
 
-function generateID() {
-    return Math.floor(Math.random() * 100000000);
-};
-
 /* Math.abs or mosbat saz  */
 
 function My_Math_abs() {
