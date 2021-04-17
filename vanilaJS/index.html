@@ -28,7 +28,7 @@
 	</style>
 	<title>JS learning</title>
 </head>
-<body>
+<body id="body">
 	<h3>localStorage , save</h3>
 	<div id="result1"></div>
 	
@@ -79,6 +79,8 @@
 	<div id="myDIV">I am a DIV element</div>
 	<button onclick="My_classList()">Add class</button>
 	<button onclick="remove_My_classList()">Remove</button>
+	<p>now try toggle bettwen class list</p>
+	<button onclick="MY_classList_toggle()">toggle</button>
 	<hr/>
 	<h3> map </h3>
 	<button onclick="My_map()">Try it</button>
@@ -109,7 +111,13 @@
 	<button onclick="My_Math_abs()">mosbat kon</button>
 	<p id="result14"></p>
 	<hr/>
-	<h3 id="121525">app that push input text and amount in to a var that are not defined</h3>
+	<h3 id="121525">show input value and push in array</h3>
+	<form id="form">
+		<input type="input" value="pouriya" id="my_input1">
+		<input type="submit" value="Submit"></input>
+	</form>
+	<p id='result16'></p>
+	<button onclick="get_val()">Show val</button>
 	<hr/>
 	<h3>make out some detail with map() from another varriable for useing some thing else </h3>
 	<hr />
@@ -117,6 +125,11 @@
 	<p>click to picture to change it</p>
 	<image id="img1" src="images/Frog-Series.jpg" />
 	<p id="result15"></p>
+	<hr />
+	<h3>if check box checked</h3>
+	<label for="myCheck">Tick bezan:</label>
+	<input type="checkbox" id="myCheck" onclick="My_checkBox1()">
+	
 	
 	
 	<script src="script.js"></script>

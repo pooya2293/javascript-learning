@@ -116,6 +116,9 @@ function My_classList() {
 function remove_My_classList() {
     document.getElementById("myDIV").classList.remove("mystyle");
 };
+function MY_classList_toggle() {
+	document.getElementById("myDIV").classList.toggle("mystyle");
+}
 
 /* map */
 
@@ -183,7 +186,6 @@ function My_Filter() {
     let answer = `ages = [${Solve}]`;
     document.getElementById('result12').innerText =
         answer;
-
 };
 
 /* forEach */
@@ -216,6 +218,25 @@ function My_Math_abs() {
 
     document.getElementById('result14').innerHTML = x;
 }
+/* show input value and push in array */
+var val = document.querySelector('#my_input1');
+var form = document.querySelector('#form');
+var new_val;
+function get_val(){
+	var defult_val = val.defaultValue;
+	new_val = val.value;
+	document.querySelector('#result16').innerHTML = new_val + ' instead of ' + defult_val;
+}
+
+	var arr10 = [];
+function push_val (e) {
+	e.preventDefault();
+	arr10.push(new_val);
+	console.log(arr10);
+}
+
+form.addEventListener('submit',push_val);
+
 
 /* change src of img1 id */
 
@@ -235,6 +256,21 @@ function change() {
 }
 
 document.querySelector('#img1').addEventListener('click',change);
+
+
+/* if checkBox check backgroudn black and text white */
+function My_checkBox1() {
+	let checkBox2 = document.querySelector('#myCheck');
+	let body = document.querySelector('#body');
+	
+	if (checkBox2.checked == true) {
+		body.style.backgroundColor = '#483636';
+		body.style.color = '#fff';
+	} else {
+		body.style.backgroundColor = '#fff';
+		body.style.color = 'black';
+	}
+}
 
 /*********************/
 
