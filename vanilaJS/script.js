@@ -231,12 +231,27 @@ function get_val(){
 	var arr10 = [];
 function push_val (e) {
 	e.preventDefault();
-	arr10.push(new_val);
+	arr10.push(new_val);	//arr10.push(JSON.parse(localStorage.getItem('arr11')));
+	document.querySelector('#result16').innerHTML = arr10;
 	console.log(arr10);
 }
 
 form.addEventListener('submit',push_val);
+function Save (){
+	localStorage.setItem('arr11',JSON.stringify(arr10));
+}
+function load (){
+	const arr12 = JSON.parse(
+	localStorage.getItem('arr11')
+	);
+	document.querySelector('#result16').innerHTML =
+	(localStorage.getItem('arr11') !== null)?
+	arr12 : 'nothing!';
+}
 
+function remove() {
+	localStorage.removeItem('arr11');
+}
 
 /* change src of img1 id */
 
@@ -258,6 +273,8 @@ function change() {
 document.querySelector('#img1').addEventListener('click',change);
 
 
+
+
 /* if checkBox check backgroudn black and text white */
 function My_checkBox1() {
 	let checkBox2 = document.querySelector('#myCheck');
@@ -272,7 +289,66 @@ function My_checkBox1() {
 	}
 }
 
+/* setInterval */
+var set_timer;
+function say_1s(x) {
+	let result = document.querySelector('#result17');
+	set_timer = setInterval(()=>
+	result.innerHTML += x
+	,1000);
+}
+
+function clear_Timeoute(){
+	clearTimeout(set_timer);
+}
+
+function clear_Interval(){
+	clearInterval(set_timer);
+}
+
+//hello_1s(' Hello');
+
+/* setInterval show clock 1s */
+var set_clock = setInterval(clock_set,1000);
+
+function clock_set() {
+	let d = new Date();
+	let t = d.toLocaleTimeString();
+	document.getElementById("result18").innerHTML = t;
+	
+}
+
+function clear_Interval2(){
+	clearInterval(set_clock);
+}
+
+
+/* join */
+function My_Join(){
+	let names1 = ['hassan','nasrin','pouriya','mehran','mobina'];
+	let X = document.querySelector('#result19');
+	X.innerHTML = names1.join(' and ');
+}
+
+/*use this keyword*/
+var info1 ={
+	id:101,
+	name:'pouri',
+	lastName:'zarei',
+	fullName:function(){
+		return this.name + ' ' + this.lastName;
+	}
+}
+	
+function My_This(){
+	document.querySelector('#result20').innerHTML = info1.fullName();
+}
+	
+
+
 /*********************/
+
+
 
 
 

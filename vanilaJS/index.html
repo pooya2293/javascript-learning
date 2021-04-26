@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<style>
 		#result7 > button {
 			border:0;
@@ -117,7 +118,10 @@
 		<input type="submit" value="Submit"></input>
 	</form>
 	<p id='result16'></p>
-	<button onclick="get_val()">Show val</button>
+	<button onclick="get_val()">Show & add</br>value</button>
+	<button onclick="Save()">Save</button>
+	<button onclick="load()">Load</button>
+	<button onclick="remove()">remove</button>
 	<hr/>
 	<h3>make out some detail with map() from another varriable for useing some thing else </h3>
 	<hr />
@@ -129,10 +133,26 @@
 	<h3>if check box checked</h3>
 	<label for="myCheck">Tick bezan:</label>
 	<input type="checkbox" id="myCheck" onclick="My_checkBox1()">
-	
-	
+	<hr />
+	<h3>setInterval</h3>
+	<p id='result17'>salam</p>
+	<button onclick="say_1s(' Hello')">say Hello</button>
+	<button onclick="say_1s(' clone')">say clone</button>
+	<button onclick="clear_Timeoute()">x</button>
+	<button onclick="clear_Interval()">x</button>
+	<hr />
+	<h3>setInterval show clock 1s</h3>
+	<p id="result18"></p>
+	<button onclick="clear_Interval2()">x</button>
+	<hr />
+	<h3>use join to show array whit seperator</h3>
+	<p id="result19"></p>
+	<button onclick="My_Join()">join</button>
+	<hr />
+	<h3>use this key word</h3>
+	<p id="result20"></p>
+	<button onclick="My_This()">this</button>
 	
 	<script src="script.js"></script>
-	
 </body>
 </html>
