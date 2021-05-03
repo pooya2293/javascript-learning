@@ -345,6 +345,55 @@ function My_This(){
 }
 	
 
+/* huge lesson: promise */
+
+function myDisplayer(some) {
+	document.querySelector('#result21').innerHTML = some;
+}
+
+const myPromise = new Promise(function(myResolve,myReject){
+	let x = false;
+	
+	if (x) {
+		myResolve('OK')
+	}else {
+		myReject('NO')
+	}
+});
+//console.log(myPromise);
+myPromise.then(
+	function(value) {myDisplayer(value)},
+	function(error) {myDisplayer(error)}
+);
+
+/* make complex promise - a mom promise to her sun buy a phone */
+
+function myDisplayer2(some , som2) {
+	document.querySelector('#result22').innerHTML = some + ':' + som2;
+}
+
+const momsPromise = new Promise(function(myResolve,myReject){
+	let money = 50000;
+	let price = 60000;
+	if(money > price) {
+		myResolve({
+			brand: 'iphone',
+			model: '11pro_Max'
+		});
+	}else {
+		myReject("We donot have enough savings. Let us save some more money.")
+	}
+});
+
+momsPromise.then(
+  function(value) {
+    myDisplayer2("Hurray I got this phone as a gift ", JSON.stringify(value));
+  },
+  function(reason) {
+    myDisplayer2("Mom coudn't buy me the phone because ", reason);
+  }
+);
+
 
 /*********************/
 
