@@ -347,6 +347,7 @@ function My_This(){
 
 /* huge lesson: promise */
 
+//show in DOM
 function myDisplayer(some) {
 	document.querySelector('#result21').innerHTML = some;
 }
@@ -360,6 +361,7 @@ const myPromise = new Promise(function(myResolve,myReject){
 		myReject('NO')
 	}
 });
+
 //console.log(myPromise);
 myPromise.then(
 	function(value) {myDisplayer(value)},
@@ -373,7 +375,7 @@ function myDisplayer2(some , som2) {
 }
 
 const momsPromise = new Promise(function(myResolve,myReject){
-	let money = 50000;
+	let money = 70000;
 	let price = 60000;
 	if(money > price) {
 		myResolve({
@@ -394,6 +396,125 @@ momsPromise.then(
   }
 );
 
+
+/* async & await */
+
+//simolate a server that respond and give nums after 5s with promise & setTimeout
+let numbersFromServer = () => {
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            var numbers = randomNumbers();
+            resolve(numbers);
+        }, 5000);
+    });
+}
+ 
+// creat 6 random number:
+function randomNumbers() {
+    return Array(6).fill().map(() => Math.round(Math.random() * 100))
+}
+
+//main curse:
+async function render() {
+    let numbers = await numbersFromServer();
+ 
+    var sorted = numbers.sort();
+    var reversed = sorted.reverse();
+    var joined = reversed.join();
+ 
+    console.log(joined);
+    console.log('tick');
+}
+ 
+render();
+
+
+/* compelex async & await */
+
+//simolate a server that respond and give users after 5s 
+let users = () => {
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            var users = ['John', 'Donald', 'Sarah'];
+            resolve(users);
+        }, 5000);
+    });
+}
+ 
+
+//simolate a server that respond and give users grads after 8s 
+let grades = (users) => {
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            console.log('Grades for: ' + users.join());
+            var grades = [1, 2, 3, 4];
+            resolve(grades);
+        }, 8000);
+    });
+}
+
+async function render2() {
+    let usersFromServer = await users();
+    let gradesFromServer = await grades(usersFromServer);
+    
+    var sorted = gradesFromServer.sort();
+    var reversed = sorted.reverse();
+    var joined = reversed.join();
+ 
+    console.log(joined);
+	console.log('i am did it :)');
+	
+	
+}
+ 
+render2();
+
+/* fetch */
+
+// getText("https://api.github.com/user");
+
+// async function getText(file) {
+//   let x = await fetch(file);
+//   let y = await x.text();
+//   document.getElementById("result25").innerHTML = y;
+// }
+
+/* JavaScript Error Handling */
+
+//try can ignore error just for test:self learning
+try {
+ 	
+  document.getElementById("result26").innerHTML = suop;
+  //document.getElementById("result26").innerHTML = demo;
+}
+
+catch(err) {
+  document.getElementById("result26").innerHTML = err.message;
+}
+
+/* playe with then() */
+
+
+var url= 'https://api.github.com/users/QuincyLarson';
+
+const playeThen =()=>{
+fetch(url)
+		.then((resp)=> resp.json())
+		.then((user)=> {
+			const {login} = user;
+			document.getElementById("result27").innerHTML = login;
+		})
+		.catch((error) => console.log(error));
+}		
+
+/* querySelectorAll */
+
+function myqurryAll() {
+   var x = document.querySelectorAll("p"); 
+   for (var i = 0; i <= 33; i++) {
+     x[i].style.backgroundColor = "red";
+   }
+}
 
 /*********************/
 
