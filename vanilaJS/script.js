@@ -516,6 +516,12 @@ function myqurryAll() {
    }
 }
 
+function myTargetEvent(event) { 
+  var x = event.target;
+  var data = event.target.getAttribute('data-j');
+  document.getElementById("result29").innerHTML = "Triggered by a " + x.tagName + " element whith data: " + data;
+}
+
 /*********************/
 
 
