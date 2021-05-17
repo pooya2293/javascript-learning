@@ -522,6 +522,32 @@ function myTargetEvent(event) {
   document.getElementById("result29").innerHTML = "Triggered by a " + x.tagName + " element whith data: " + data;
 }
 
+/* remove repeted by new Set */
+
+
+const removeReppet =()=>{
+	var repeted = ['abas', 'samad','somi' ,'ali' , 'abas' , 'samad' , 'mahmood' , 'somi' , 'poori' , 'ali' , 'samad' , 'mahmood' ];
+
+	var nweRepeted = new Set(repeted.map((item)=>{
+		return (item)
+	}));
+	
+	//i cant understand why nweRepeted.map is not a function
+	var newArry = new Set(nweRepeted.map((item)=>{
+		document.getElementById("result30").innerHTML = ',' + item; 
+	}));
+
+	console.log(nweRepeted);
+
+	
+}
+
+
+/* new and this */
+
+
+
+
 /*********************/
 
 
