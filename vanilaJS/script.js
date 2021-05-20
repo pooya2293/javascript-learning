@@ -553,6 +553,19 @@ function Car1(make,model,year) {
 const Car2 = new Car1('Eagle', 'Talon TSi', 1993);
 document.querySelector('#result31').innerHTML = Car2.model;
 
+/* typeOf */
+
+function MytypeOf() {
+    console.log(typeof 25)//number
+    console.log(typeof 'Hello')//string
+    console.log(typeof true)//boolean
+    console.log(typeof lolo)//undefined
+}
+
+
+
+
+
 /*********************/
 
 
