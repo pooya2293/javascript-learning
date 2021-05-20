@@ -353,7 +353,7 @@ function myDisplayer(some) {
 }
 
 const myPromise = new Promise(function(myResolve,myReject){
-	let x = false;
+	let x = true;
 	
 	if (x) {
 		myResolve('OK')
@@ -525,28 +525,33 @@ function myTargetEvent(event) {
 /* remove repeted by new Set */
 
 
-const removeReppet =()=>{
-	var repeted = ['abas', 'samad','somi' ,'ali' , 'abas' , 'samad' , 'mahmood' , 'somi' , 'poori' , 'ali' , 'samad' , 'mahmood' ];
+// const removeReppet =()=>{
+// 	var repeted = ['abas', 'samad','somi' ,'ali' , 'abas' , 'samad' , 'mahmood' , 'somi' , 'poori' , 'ali' , 'samad' , 'mahmood' ];
 
-	var nweRepeted = new Set(repeted.map((item)=>{
-		return (item)
-	}));
+// 	var nweRepeted = new Set(repeted.map((item)=>{
+// 		return (item)
+// 	}));
 	
-	//i cant understand why nweRepeted.map is not a function
-	var newArry = new Set(nweRepeted.map((item)=>{
-		document.getElementById("result30").innerHTML = ',' + item; 
-	}));
+// 	//i cant understand why nweRepeted.map is not a function
+// 	var newArry = new Set(nweRepeted.map((item)=>{
+// 		document.getElementById("result30").innerHTML = ',' + item; 
+// 	}));
 
-	console.log(nweRepeted);
+// 	console.log(nweRepeted);
 
 	
-}
+// }
 
 
 /* new and this */
 
-
-
+function Car1(make,model,year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+}
+const Car2 = new Car1('Eagle', 'Talon TSi', 1993);
+document.querySelector('#result31').innerHTML = Car2.model;
 
 /*********************/
 
