@@ -579,6 +579,15 @@ function getBounding() {
     }
 }
 
+/* focus and/or remove focus */
+function getfocus() {
+  document.getElementById("link34").focus();
+}
+
+function losefocus() {
+  document.getElementById("link34").blur();
+}
+
 /*********************/
 
 
