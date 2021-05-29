@@ -560,11 +560,24 @@ function MytypeOf() {
     console.log(typeof 'Hello')//string
     console.log(typeof true)//boolean
     console.log(typeof lolo)//undefined
+    console.log(typeof function(item){item=0})//undefined
 }
 
+/* Element.getBoundingClientRect() */
 
+function getBounding() {
+    let elem = document.querySelector('.div33');
+    let rect = elem.getBoundingClientRect();
+    console.log(rect);
 
-
+    for (var key in rect) { //NEW FOR LEARNING
+      if(typeof rect[key] !== 'function') {
+        let para = document.createElement('p');
+        para.textContent  = `${ key } : ${ rect[key] }`;//NEW FOR LEARNING
+        document.body.appendChild(para);
+        }//when did'nt use if return this cod in last of para : toJSON : function toJSON() { [native code] } 
+    }
+}
 
 /*********************/
 
