@@ -139,7 +139,7 @@ function My_map2(x) {
 
 /* reduce or increas in array from left to right */
 
-var nums_reduce = [175, 25, 50, 50];
+var nums_reduce = [175, 25, 25, 50];
 
 document.getElementById('result9').innerHTML = nums_reduce.reduce(My_reduce);
 
@@ -587,6 +587,18 @@ function getfocus() {
 function losefocus() {
   document.getElementById("link34").blur();
 }
+
+/* parseFloat() & toFixed() */
+
+function getOnlyNum(r) {
+  document.getElementById("result35").innerHTML= parseFloat(r) * 2;
+}
+
+function cutDecimal(r){
+    document.getElementById("result35").innerHTML = parseFloat(r).toFixed(3)*2;
+}
+
+
 
 /*********************/
 
