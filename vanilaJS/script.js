@@ -1,4 +1,4 @@
-/* localStorage , save */
+    /* localStorage , save */
 
 localStorage.setItem('name', 'Pourya');
 document.getElementById('result1').innerHTML =
@@ -598,7 +598,52 @@ function cutDecimal(r){
     document.getElementById("result35").innerHTML = parseFloat(r).toFixed(3)*2;
 }
 
+/* setProperty */
 
+const borderBtn =document.querySelector('.border');
+const bgColorBtn =document.querySelector('.bgColor');
+const colorTextBtn =document.querySelector('.color');
+const box = document.querySelector('.box');
+
+// return random number bettwen max - min
+function random(min,max){
+    const num = Math.floor(Math.random()*(max-min)) + min;
+    return num;
+}
+// return random rgb bettwen 0  255
+function randomColor() {
+    return 'rgb('+random(0,255)+','+random(0,255)+','+random(0,255)+')';
+}
+// get styleSheet link 
+const stylesheet = document.styleSheets[0];
+console.log(stylesheet);
+let boxParaRule;
+
+// get box p css rules 
+for(let i = 0;i<stylesheet.cssRules.length;i++){
+    if(stylesheet.cssRules[i].selectorText === '.box p') {
+        boxParaRule = stylesheet.cssRules[i];
+    }
+}
+
+function setRandomBorder(){
+    const newBorder = random(1,80) + 'px solid ' + randomColor();
+    boxParaRule.style.setProperty('border',newBorder);
+}
+
+function setRandomBg(){
+    const newBgColor = randomColor();
+    boxParaRule.style.setProperty('background-color',newBgColor);
+}
+
+function setRandomColor(){
+    const newColor = randomColor();
+    boxParaRule.style.setProperty('color',newColor);
+}
+
+borderBtn.addEventListener('click',()=>setRandomBorder());
+bgColorBtn.addEventListener('click',()=>setRandomBg());
+colorTextBtn.addEventListener('click',()=>setRandomColor());
 
 /*********************/
 
