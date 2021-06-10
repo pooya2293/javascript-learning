@@ -616,7 +616,6 @@ function randomColor() {
 }
 // get styleSheet link 
 const stylesheet = document.styleSheets[0];
-console.log(stylesheet);
 let boxParaRule;
 
 // get box p css rules 
@@ -644,6 +643,33 @@ function setRandomColor(){
 borderBtn.addEventListener('click',()=>setRandomBorder());
 bgColorBtn.addEventListener('click',()=>setRandomBg());
 colorTextBtn.addEventListener('click',()=>setRandomColor());
+
+/* pervius training with other way */
+
+const borderBtn2 =document.querySelector('.border2');
+const bgColorBtn2 =document.querySelector('.bgColor2');
+const colorTextBtn2 =document.querySelector('.color2');
+const box2 = document.querySelector('.box2 p');
+
+function setBgColor(){
+    box2.style.background = randomColor();
+}
+
+function  setBorder(){
+    const newBorder = random(1,80) + 'px solid ' + randomColor();
+    box2.style.border = newBorder;
+}
+
+function setColor(){
+    box2.style.color = randomColor();
+}
+
+bgColorBtn2.addEventListener('click' , ()=>setBgColor());
+borderBtn2.addEventListener('click' , ()=>setBorder());
+colorTextBtn2.addEventListener('click' , ()=>setColor());
+
+
+
 
 /*********************/
 
