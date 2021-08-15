@@ -685,7 +685,8 @@ document.querySelector('.r37-7').innerHTML =range('A'.charCodeAt(0), 'Z'.charCod
 document.querySelector('.r37-8').innerHTML =range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x => String.fromCharCode(x));
 
 document.querySelector('.r37-9').innerHTML = Array.from({ length:5 } , (_, index) =>{
-    return index * 2
+    const number = index + 0.5;
+    return [index,number] 
 })
 
 
