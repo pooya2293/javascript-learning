@@ -668,7 +668,21 @@ bgColorBtn2.addEventListener('click' , ()=>setBgColor());
 borderBtn2.addEventListener('click' , ()=>setBorder());
 colorTextBtn2.addEventListener('click' , ()=>setColor());
 
+/* Array.from() */
+document.querySelector('.r37-1').innerHTML = Array.from('foo');
 
+document.querySelector('.r37-2').innerHTML = Array.from([1, 2, 3], x => x + x);
+
+const set = new Set(['foo', 'bar', 'baz', 'foo','bar','Baz']);
+document.querySelector('.r37-3').innerHTML =Array.from(set);
+
+const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
+document.querySelector('.r37-4').innerHTML =range(0, 4, 1);
+document.querySelector('.r37-5').innerHTML =range(1, 10, 2);
+document.querySelector('.r37-6').innerHTML =range(0, 400, 50);
+// mix from , charCodeAt , fromCharCode
+document.querySelector('.r37-7').innerHTML =range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1);
+document.querySelector('.r37-8').innerHTML =range('A'.charCodeAt(0), 'Z'.charCodeAt(0), 1).map(x => String.fromCharCode(x));
 
 
 /*********************/

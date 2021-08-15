@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	<style>
 		#result7 > button {
 			border:0;
@@ -278,7 +279,7 @@
 	<button onclick="getOnlyNum('4.24asds')">getOnlyNum('4.24asds')</button>
 	<button onclick="cutDecimal('4.24123')">cutDecimal('4.24123')</button>
 	<hr />
-	<h3>setProperty</h3>
+	<h3 id='36'>setProperty</h3>
 	<div class="controls">
 		<button class="border">Border</button>
 		<button class="bgColor">Background</button>
@@ -298,6 +299,19 @@
 		<p>Box</p>
 	</div>
 	<hr>
+	<h3 id='37'>Array.from()</h3>
+	<p>Array.from('foo') //<span class='r37-1'></span></p>
+
+	<p>Array.from([1, 2, 3], x => x + x): //<span class='r37-2'></span></p>
+
+	<p>set = ['foo', 'bar', 'baz', 'foo','bar','Baz']): //<span class='r37-3'></span></p>
+
+	<p>range(0, 4, 1): //<span class='r37-4'></span></p>
+	<p>range(1, 10, 2): //<span class='r37-5'></span></p>
+	<p>range(0, 400, 50): //<span class='r37-6'></span></p>
+	<p>write charCodeAt A-Z: //<span class='r37-7'></span></p>
+	<p>write Alphabet: //<span class='r37-8'></span></p>
+	
 
 	
 	<script src="script.js"></script>
